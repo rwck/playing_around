@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+  border: 1px dotted magenta;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.container h1 {
+  font-family: monospace;
+  text-align: center;
+}

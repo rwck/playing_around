@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Test app</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+
+<body>
+  <div class="heading">
+    <h1>Hello there</h1>
+  </div>
+
+  <div class="main">
+    Main div is in here.
+
+    <div id="todo">
+    </div>
+
+    <script type="text/template" id="item-template">
+      <div>
+        <input id="todo-complete" type="checkbox" <%=completed ? 'checked="checked"' : '' %>>
+        <%- title %>
+        just give me something...
+      </div>
+    </script>
+
+    <div>
+
+    </div>
+
+  </div>
+
+  <script src="jquery-2.1.4.min.js"></script>
+  <script src="underscore-min.js"></script>
+  <script src="backbone-min.js"></script>
+
+
+  <script src="main.js"></script>
+</body>
+
+</html>

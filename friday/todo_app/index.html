@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="assets/styles.css">
+  <title>To do app: Backbone</title>
+</head>
+
+<body>
+  <div class="container">
+
+  <h1>Hello Todo App</h1>
+  <section id="todoapp">
+    <header id="header">
+      <input id="new-todo" placeholder="Stuff that needs to be done" autofocus>
+    </header>
+    <section id="main">
+      <input id="toggle-all" type="checkbox">
+      <label for="toggle-all">Mark everything as done</label>
+      <ul id="todo-list">
+      </ul>
+    </section>
+    <footer id="footer">
+    </footer>
+  </section>
+
+  <div id="info">
+    <p>
+      Double click to edit a todo
+    </p>
+    <p>
+      <!-- Written by Donald Wade (...) -->
+    </p>
+  </div>
+
+
+
+  <div>
+    <script type="text/template" id="item-template">
+      <div class="view">
+        <input class="toggle" type="checkbox" <%=c ompleted ? 'checked' : '' %>>
+        <button class="destroy"></button>
+      </div>
+      <input class="edit" value="<% -title %>">
+    </script>
+
+
+    <script type="text/template" id="stats-template">
+      <span id="todo-count">
+        <strong>
+          <%= remaining %>
+        </strong>
+        <%= remaining === 1 ? 'item' : 'items' %> left</span>
+      <ul id="filters">
+        <li>
+          <a class="selected" href="#/">All</a>
+        </li>
+        <li>
+          <a href="#/active">Active</a>
+        </li>
+        <li>
+          <a href="#/completed">Completed</a>
+        </li>
+      </ul>
+      <% if (completed) { %>
+        <button id="clear-completed">Clear completed (
+          <%= completed %>)</button>
+        <% } %>
+    </script>
+  </div>
+
+
+  <div>
+
+
+    <script src="lib/jquery-2.1.4.min.js"></script>
+    <script src="lib/underscore-min.js"></script>
+    <script src="lib/backbone-min.js"></script>
+    <script src="lib/backbone.localStorage.js"></script>
+
+    <script src="my_js/models/todo.js"></script>
+    <script src="my_js/collections/todos.js"></script>
+    <script src="my_js/views/todos.js"></script>
+    <script src="my_js/views/app.js"></script>
+    <script src="my_js/routers/router.js"></script>
+    <script src="my_js/app.js"></script>
+
+  </div>
+</div>
+
+</body>
+
+</html>

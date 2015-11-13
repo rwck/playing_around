@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <title>Doughnuts</title>
+</head>
+<body>
+
+  <form id="searchform">
+    <input type="text" name="s" value="crazy love">
+    <input type="submit">
+  </form>
+
+
+  <script>
+
+  var data = $("#searchform").serialize();
+  console.log(data);
+
+
+
+
+  if (false) {
+    console.log("helllo");
+
+    $.getJSON("http://omdbapi.com", {s: "Love"}).done(function(data){
+      console.log(data);
+    });
+
+
+
+  $.ajax({
+    url: "http://api.doughnuts.ga/doughnuts",
+    type: "GET",
+    data: {
+    },
+    dataType: "json", // you don't need this but it's recommended
+    success: function(data) {
+      console.log("success", data);
+      console.log("stringified: ", JSON.stringify(data));
+
+    },
+    error: function(xhr, status, errorMessage) {
+      console.log("error", errorMessage);
+    },
+    complete: function(xhr, status) {
+      console.log(status, xhr);
+    }
+  });
+
+
+  $.ajax({
+    url: "http://api.doughnuts.ga/doughnuts",
+    type: "GET",
+    data: {
+    },
+    dataType: "json"
+  }).done(function(data){
+    console.log("success", data);
+  }).fail(function(xhr, status, errorMessage){
+    console.log("fail", status, errorMessage);
+  }).always(function(xhr, status){
+    console.log("always", status);
+  });
+}
+
+
+
+  </script>
+
+</body>
+</html>
