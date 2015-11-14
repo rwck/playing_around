@@ -5,6 +5,7 @@
 Inside the jQuery image there is a whole load of stuff. How do you get in there.
 
 Why would you end up with loads of ajax requests going on?
+<<<<<<< HEAD
 
 ## Front end dev work - you don't get to know quite when t's all broken - need to do more user interactivity etc
 
@@ -102,3 +103,5 @@ in a collection, on the other hand,
 url: "/secrets"
 ```
 this only gives you the get and nothing like `/secrets/1`
+=======
+>>>>>>> 8d7879f01c7c06f3b1d24430d4905ea780791823

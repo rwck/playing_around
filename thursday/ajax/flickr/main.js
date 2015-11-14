@@ -12,9 +12,12 @@ function displayData(data) {
         "_m.jpg";
       var image = $("<img>");
       image.attr("src", imageUrl);
+<<<<<<< HEAD
       image.click(function(){
         
       });
+=======
+>>>>>>> 8d7879f01c7c06f3b1d24430d4905ea780791823
       // image.onclick(alert("clicked!"));
       $(".search-results").append(image);
       $(image).wrap($('<a>', {
@@ -103,6 +106,12 @@ $(window).scroll(function() {
 
 
 
+<<<<<<< HEAD
 // $(document).ready(function() {
 //   // tally.number = 1;
 // });
+=======
+$(document).ready(function() {
+  // tally.number = 1;
+});
+>>>>>>> 8d7879f01c7c06f3b1d24430d4905ea780791823
